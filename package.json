@@ -23,6 +23,7 @@
     "graphql-tools": "^4.0.3",
     "merge-graphql-schemas": "^1.5.7",
     "mongoose": "^5.3.9",
+    "mongoose-auto-increment": "^5.0.1",
     "nodemon": "^1.18.6"
   },
   "devDependencies": {

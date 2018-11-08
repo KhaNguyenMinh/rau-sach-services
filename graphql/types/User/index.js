@@ -10,8 +10,8 @@ type Query {
   users: [User]
 }
 type Mutation {
-  addUser(id: String!, name: String!, email: String!): User
-  editUser(id: String, name: String, email: String): User
-  deleteUser(id: String, name: String, email: String): User
+  addUser(name: String!, email: String!): User
+  editUser(name: String, email: String): User
+  deleteUser(name: String, email: String): User
 }
 `;

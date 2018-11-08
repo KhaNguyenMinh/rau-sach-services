@@ -1,14 +1,10 @@
 import mongoose from "mongoose";
+const autoIncrement = require('mongoose-auto-increment');
 
 const Schema = mongoose.Schema;
 
 // Create the User Schema.
 const UserSchema = new Schema({
-  id: {
-    type: String,
-    required: true,
-    unique: true
-  },
   name: {
     type: String,
     required: true
@@ -19,6 +15,8 @@ const UserSchema = new Schema({
   }
 });
 
+autoIncrement.initialize(mongoose.connection);
+UserSchema.plugin(autoIncrement.plugin, 'User');
 const User = mongoose.model("User", UserSchema);
 
 export default User;
